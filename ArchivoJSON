@@ -1,0 +1,15 @@
+# Cargar paquetes
+library(jsonlite)
+library(ggplot2)
+
+
+# Cargar archivo JSON
+datos_json <- fromJSON("/BrandonPrado/ArchivoJSON.json")
+
+# Convertir a data frame
+datos_df <- as.data.frame(datos_json)
+
+  # Crear gráfico de barras
+ggplot(datos_df, aes(x = members.name, y = members.age)) +
+  geom_bar(stat = "identity") + geom_point() + 
+  labs(title = "Superhéroes", x = "Nombre del superhéroe", y = "Edad")
