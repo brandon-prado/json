@@ -1,15 +1,115 @@
-# Cargar paquetes
-library(jsonlite)
-library(ggplot2)
+{
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
+  "active": true,
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
+{
+      "name": "Superman",
+      "age": 40,
+      "secretIdentity": "Henry Cavill",
+      "powers": [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
+{
+      "name": "SpiderMan",
+      "age": 21,
+      "secretIdentity": "Peter Parker",
+      "powers": [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
 
+{
+      "name": "Hulk",
+      "age": 38,
+      "secretIdentity": "Mark Rufalo",
+      "powers": [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
 
-# Cargar archivo JSON
-datos_json <- fromJSON("/BrandonPrado/ArchivoJSON.json")
+{
+      "name": "Capitan America",
+      "age": 29,
+      "secretIdentity": "Chris Evans",
+      "powers": [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
+{
+      "name": "Batman",
+      "age": 45,
+      "secretIdentity": "Bruce Wayne",
+      "powers": [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
+{
+      "name": "Mrs. Increible",
+      "age": 37,
+      "secretIdentity": "Bob",
+      "powers": [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
+{
+      "name": "Wonder Woman",
+      "age": 29,
+      "secretIdentity": "Gal Gadot",
+      "powers": [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
 
-# Convertir a data frame
-datos_df <- as.data.frame(datos_json)
+    {
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name": "Eternal Flame",
+      "age": 82,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
+}
 
-  # Crear gráfico de barras
-ggplot(datos_df, aes(x = members.name, y = members.age)) +
-  geom_bar(stat = "identity") + geom_point() + 
-  labs(title = "Superhéroes", x = "Nombre del superhéroe", y = "Edad")
